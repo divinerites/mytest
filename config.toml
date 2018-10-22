@@ -1,0 +1,48 @@
+baseURL = "http://example.org/"
+languageCode = "fr"
+title = "My New Hugo Site"
+
+# Build robots.txt file
+enableRobotsTXT = true
+enableGitInfo = true
+pygmentsCodeFences = true
+defaultContentLanguageInSubdir = false
+defaultContentLanguage = "fr"
+disableKinds = ["taxonomy", "taxonomyTerm", "RSS"]
+
+[params]
+    [params.agenda]
+        id      = "params.agenda.id RACINE"
+        title   = "params.agenda.title RACINE"
+
+    [params.global]
+        robots = "index,follow"
+        [params.global.agenda]
+            id      = "params.global.agenda.id RACINE"
+            title   = "params.global.agenda.title RACINE"
+
+    [[params.listeLangues]]
+        code = "fr"
+    [[params.listeLangues]]
+        code = "en"
+
+# Gestion des langues : FR/EN/NL/DE
+[languages]
+
+    ### FRANCAIS
+    [languages.fr]
+        languageCode = "fr-fr"
+        title = "languages.fr.title"
+    [languages.fr.params.agenda]
+        enable  = true
+        id      = "languages.fr.params.agenda.id FRANCAIS"
+        # title   = "languages.fr.params.agenda.title FRANCAIS"
+
+    ### ANGLAIS
+    [languages.en]
+        languageCode = "en"
+        title = "languages.en.title"
+    [languages.en.params.agenda]
+        enable  = true
+        # id      = "languages.en.params.agenda.id ANGLAIS"
+        title   = "languages.en.params.agenda.title ANGLAIS"
