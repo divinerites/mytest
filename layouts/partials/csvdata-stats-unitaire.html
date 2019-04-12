@@ -1,0 +1,58 @@
+<!--  Affecte le fichier physique  -->
+{{ $.Scratch.Set "csvURL" ( $.Scratch.Get "csvfile" ) }}
+
+{{ if (fileExists ( $.Scratch.Get "csvfile" )) }}
+    <!-- Mode hugo server local -->
+    {{ if .Site.IsServer }}
+        <section id="texteintro">
+            <!-- Test pour les pages DRAFT -->
+            {{ with $.Page.Draft }}
+                <div id="draft-warning">DRAFT</div>
+            {{ end }}
+            <p class="info" align="center">... [MODE SERVEUR HUGO] ...<p>
+            <p class="info">Fichier à traiter : {{  $.Scratch.Get "csvURL" }}</p>
+            <p class="info">N° de colonne à aggréger : {{ $.Scratch.Get "csvNUMCOL_CATEG" }}</p>
+            <p class="info">Type de graphique par défaut : {{ $.Scratch.Get "csv_graph_type" }}</p>
+        </section>
+    {{ end }}
+
+    <!-- Traite le fichier si on n'est pas en mode bootstrap -->
+    {{ if (not $.Page.Params.mode_bootstrap) }}
+        <!--  Identifie les différentes valeurs des catégories  -->
+        {{ partial "categ_identifie.html" . }}
+
+        <!--  Identifie les différentes valeurs des colonnes à traiter statistiquements  -->
+        {{ partial "stats_identifie.html" . }}
+
+        <!--  Traitements différents selon le type de graphique
+            + compute les diverses statistiques des différentes catégories
+            + affiche les graphiques selon le type de graphique demandé  -->
+        {{ if eq ($.Scratch.Get "csv_graph_type") "pie" }}
+                {{ partial "categ_totaux_by_categ.html" . }}
+                {{ partial "categ_graph_pie_multi.html" . }}
+
+            {{ else if eq ($.Scratch.Get "csv_graph_type") "line" }}
+                {{ partial "categ_totaux_by_somme.html" . }}
+                {{ partial "categ_graph_linebar_multi.html" . }}
+
+            {{ else }}
+                <div>Le type de graphe {{ $.Scratch.Get "csv_graph_type" }} est inconnu. Arrêt du traitement.</div>
+        {{ end }}
+
+        <!--  Affiche une synthèse du CSV  -->
+        {{ partial "categ_synthese.html" . }}
+
+    {{ else }}
+        <!-- On est en mode bootstrap, il faut configurer le fichier .md concerné -->
+        <div id="draft-warning">
+            Mode BOOTSTRAP pour {{ .Page.Name }}...<br>
+            Veuillez adapter le front matter de {{ .Page.URL }}
+        </div>
+    {{ end }}
+
+    <!--  Affiche une le tableau CSV selon options  -->
+    {{ partial "csvdata-table.html" . }}
+
+{{ else }}
+    <div>Le fichier {{ $.Scratch.Get "csvURL" }} n''existe pas à cet emplacement. Arrêt du traitement.</div>
+{{ end }}   <!--  FIN test existence du fichier  -->

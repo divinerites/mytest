@@ -1,0 +1,36 @@
+<!-- MANDATORY - On met dans le front matter les specs des graphiques à obtenir -->
+{{- if $.Page.Params.numcol_categ -}}
+        {{- $.Scratch.Set "csvNUMCOL_CATEG" (int (lang.NumFmt 0 $.Page.Params.numcol_categ "-")) -}}
+    {{- else -}}
+        <div>Le numéro de numcol_categ à traiter n'est pas donné. Arrêt du traitement.</div>
+{{- end -}}
+{{- if $.Page.Params.numcol_stats -}}
+        {{- $.Scratch.Set "csvNUMCOL_STATS" $.Page.Params.numcol_stats -}}
+    {{- else -}}
+        <div>Les donnée numériques à synthétiser ne sont pas données. Arrêt du traitement.</div>
+{{- end -}}
+{{- if $.Page.Params.numcol_famille_situation -}}
+        {{- $.Scratch.Set "csvFAMILLE_SITU" $.Page.Params.numcol_famille_situation -}}
+    {{- else -}}
+        <div>Les Familles de situation ne sont pas données. Arrêt du traitement.</div>
+{{- end -}}
+{{- if $.Page.Params.numcol_date_effet -}}
+        {{- $.Scratch.Set "csvDATE_EFFET" $.Page.Params.numcol_date_effet -}}
+    {{- else -}}
+        <div>La date d'effet des contrats n'est pas donnée. Arrêt du traitement.</div>
+{{- end -}}
+{{- if $.Page.Params.numcol_date_fin -}}
+        {{- $.Scratch.Set "csvDATE_FIN" $.Page.Params.numcol_date_fin -}}
+    {{- else -}}
+        <div>La date de fin des contrats n'est pas donnée. Arrêt du traitement.</div>
+{{- end -}}
+{{- if $.Page.Params.graph_type -}}
+        {{- $.Scratch.Set "csv_graph_type" $.Page.Params.graph_type -}}
+    {{- else -}}
+        <div>Letype de graphe n'est pas donné. Arrêt du traitement.</div>
+{{- end -}}
+{{- if $.Page.Params.graph_legende -}}
+        {{- $.Scratch.Set "graph_legende" $.Page.Params.graph_legende -}}
+    {{- else -}}
+        {{- $.Scratch.Set "graph_legende" true -}}
+{{- end -}}

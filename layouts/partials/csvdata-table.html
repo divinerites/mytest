@@ -1,0 +1,31 @@
+{{/* Tiens compte en 1er de l'option "detail_tableau" du front-matter  */}}
+{{- if $.Page.Params.detail_tableau -}}
+    {{- if $.Page.Params.detail_tableau_court -}}
+            <h2>Extrait du fichier CVS source</h2>
+        {{- else -}}
+            <h2>Détail du fichier CVS source</h2>
+    {{- end -}}
+    <div class="textetableau" style="overflow-x:auto;"></div>
+        {{/* récupère le nom de fichier CSV */}}
+        {{- $csv := getCSV  ";" ($.Scratch.Get "csvURL") -}}
+        <table>
+            {{- range $i, $v1 := $csv }}
+                {{- if not (and ($.Page.Params.detail_tableau_court) (gt $i 20)) -}}
+                    <tr>
+                        {{- if eq $i 0 -}}
+                            {{- range $j, $v2 := . -}}
+                                <td>{{- $j -}}-{{- $v2 -}}</td>
+                            {{- end -}}
+                        {{- else -}}
+                            {{- range $j, $v2 := . -}}
+                                <td>{{- $v2 -}}</td>
+                            {{- end -}}
+                        {{- end -}}
+                    </tr>
+                {{ else if (le $i 25) }}
+                    <tr>{{- range $j, $v2 := . -}}<td>...</td>{{- end -}}</tr>
+                {{- end -}}
+            {{- end -}}
+        </table>
+    </div>
+{{- end -}}

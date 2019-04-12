@@ -1,0 +1,3 @@
+Code compagnie;Nom compagnie;Code branche;Nom branche;Code catégorie;Nom catégorie;Code situation;Date d'effet;Date fin contrat;Type encaissement;Motif fin contrat;Commission annuelle Cie;Honoraires (HT) annuels;Prime TTC annuelle Client;Cpl. Proj. : Tx réussite projet;Contrat remplacé par;Contrat remplaçant de;Cpl. Proj. : Com. prev.;Type client;Com Totale
+1;Ma compagnie 1;AP;Assurance de Personnes;82;COMPLEMENTAIRE MALADIE (82);R - Résilié;11/07/96;12/31/11;Non confié;65 - RESILIATION CLIENT;133.08;0.00;1056.00;0.00;;;0.00;PARTICULIER;133.08
+2;Ma compagnie 2;MR;Multirisques;69;MULTIRISQUE PROFESSIONNELLE (69);R - Résilié;01/01/00;12/31/06;Confié;65 - RESILIATION CLIENT;0.00;0.00;279.60;0.00;;;0.00;PARTICULIER;0.00
