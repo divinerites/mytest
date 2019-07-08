@@ -1,5 +1,5 @@
 # baseURL non nécessaire pour consultation directe en filesystem.
-baseURL = "http://10.0.100.152:8000/"
+baseURL = "http://localhost:8888/"
 # Nécessaire pour consultaion directe en filesystem
 relativeURLs = true
 uglyURLs = true
@@ -17,13 +17,11 @@ disableFastRender = true
 cleanDestinationDir = true
 
 contentdir = "content"
-# publishdir = "../public"
 builddrafts = false
 author = "DG"
 copyright = "Utilise Hugo + https://github.com/chartjs/Chart.js"
 
 disableKinds = ["taxonomy","taxonomyTerm","RSS"]
-
 timeout=30000
 
 [outputs]
@@ -36,7 +34,3 @@ home = [ "HTML"]
   logo = "/images/logo-stats.png"
 
   dateFormat = "02/01/2006"
-
-  # Pour éviter de traiter les gros fichiers CSV pendant le développement.
-  # modeDev = true
-  modeDev = false
