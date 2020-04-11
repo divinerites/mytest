@@ -1,2 +1,20 @@
 <h1> TEST Netlify Functions - 1</h1>
 <h3><a href=".netlify/functions/hello-world/">hello-world</a></h3>
+
+
+<script src="https://wubook.net/js/wblib.jgz"></script>
+<script>
+   WuBook = new _WuBook(1539773018);
+   /* function myCallback(feeds) {
+      alert('Feedbacks Object is now ready');
+      console.log(feeds);
+   }
+   */
+
+   WuBook.feedbacks({'n' : 10, 'offset' : 0}, myCallback);
+
+   function myCallback(error) {
+      if (!error) alert('feedback OK!');
+      else alert('An error occurred: ' + error);
+    }
+</script>
