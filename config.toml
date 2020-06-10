@@ -13,7 +13,7 @@ cleanDestinationDir = true
 contentdir = "content"
 builddrafts = false
 author = "DG"
-copyright = "Utilise Hugo + https://github.com/chartjs/Chart.js"
+copyright = "Utilise Hugo"
 
 disableKinds = ["taxonomy","taxonomyTerm","RSS"]
 timeout=30000
