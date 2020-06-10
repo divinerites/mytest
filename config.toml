@@ -1,5 +1,5 @@
 # baseURL non nécessaire pour consultation directe en filesystem.
-baseURL = "http://localhost:8888"
+baseURL = "https://www.mysite.org"
 
 languageCode = "fr"
 DefaultContentLanguage = "fr"

@@ -3,42 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://localhost:8888/nl/highres/</loc>
+    <loc>https://www.mysite.org/nl/highres/</loc>
     <lastmod>2020-06-10T18:14:29+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:8888/en/highres/"
+                href="https://www.mysite.org/en/highres/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://localhost:8888/highres/"
+                href="https://www.mysite.org/highres/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://localhost:8888/nl/highres/"
+                href="https://www.mysite.org/nl/highres/"
                 />
   </url>
   
   <url>
-    <loc>http://localhost:8888/nl/</loc>
+    <loc>https://www.mysite.org/nl/</loc>
     <lastmod>2020-06-10T18:14:29+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:8888/en/"
+                href="https://www.mysite.org/en/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://localhost:8888/"
+                href="https://www.mysite.org/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://localhost:8888/nl/"
+                href="https://www.mysite.org/nl/"
                 />
   </url>
   
