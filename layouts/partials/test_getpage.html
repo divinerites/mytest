@@ -1,0 +1,13 @@
+{{ $page    := .Site.GetPage "section" "highres" | absLangURL | safeURL }}
+{{ $pageurl := .Site.GetPage "section" "highres" | relLangURL }}
+
+<a href="{{ .Site.GetPage "section" "highres" | relLangURL }}">VERS LA PAGE HIGHRES</a><br>
+$page : {{ $page }}<br>
+$pageurl : {{ $pageurl }}<br>
+
+<h2>Other translations</h2>
+{{ if .IsTranslated }}
+    {{ range .Translations }}
+    {{ .Lang }} : <a href="{{ site.BaseURL | absURL }}{{ .Lang }}">{{ site.BaseURL | absURL }}{{ .Lang }}</a><br>
+    {{ end }}
+{{ end }}

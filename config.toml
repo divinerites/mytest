@@ -1,17 +1,12 @@
 # baseURL non nécessaire pour consultation directe en filesystem.
-baseURL = "http://localhost:8888/"
-# Nécessaire pour consultaion directe en filesystem
-relativeURLs = true
-uglyURLs = true
-# Fin des options pour usage file system
-# Option pour usage WebServer
-# canonifyurls = true
+baseURL = "http://localhost:8888"
 
 languageCode = "fr"
 DefaultContentLanguage = "fr"
+defaultContentLanguageInSubdir = false
 
-title = "Stats"
-theme = "uno-master-v2"
+title = "TEST"
+theme = ""
 
 disableFastRender = true
 cleanDestinationDir = true
@@ -24,13 +19,35 @@ copyright = "Utilise Hugo + https://github.com/chartjs/Chart.js"
 disableKinds = ["taxonomy","taxonomyTerm","RSS"]
 timeout=30000
 
+enableRobotsTXT = true
+
+enableGitInfo = true
+pygmentsCodeFences = true
+enableEmoji = true
+
 [outputs]
 home = [ "HTML"]
 
 [params]
-  version_stats = "0.3.5"
-  description = "Test for hugo 0.55"
-  cover = "/images/background-cover.jpg"
-  logo = "/images/logo-stats.png"
-
+  description = "Test for hugo 0.72.0"
   dateFormat = "02/01/2006"
+  [[params.listeLangues]]
+      code = "fr"
+  [[params.listeLangues]]
+      code = "en"
+  [[params.listeLangues]]
+      code = "nl"
+
+[languages]
+  [languages.fr]
+      languageName = "Français"
+      languageCode = "fr-fr"
+      home = "Accueil"
+  [languages.en]
+      languageName = "Anglais"
+      languageCode = "en"
+      home = "Accueil EN"
+  [languages.nl]
+      languageName = "Hollandais"
+      languageCode = "nl"
+      home = "Accueil NL"
