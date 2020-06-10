@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	
+	<sitemap>
+	   	<loc>http://localhost:8888/en/sitemap.xml</loc>
+		
+	   	<lastmod>2020-06-10T18:14:29+02:00</lastmod>
+		
+	</sitemap>
+	
+	<sitemap>
+	   	<loc>http://localhost:8888/fr/sitemap.xml</loc>
+		
+	   	<lastmod>2020-06-10T18:14:29+02:00</lastmod>
+		
+	</sitemap>
+	
+	<sitemap>
+	   	<loc>http://localhost:8888/nl/sitemap.xml</loc>
+		
+	   	<lastmod>2020-06-10T18:14:29+02:00</lastmod>
+		
+	</sitemap>
+	
+</sitemapindex>

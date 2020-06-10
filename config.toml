@@ -6,7 +6,6 @@ DefaultContentLanguage = "fr"
 defaultContentLanguageInSubdir = false
 
 title = "TEST"
-theme = ""
 
 disableFastRender = true
 cleanDestinationDir = true

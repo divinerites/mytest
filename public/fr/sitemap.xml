@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://localhost:8888/highres/</loc>
+    <lastmod>2020-06-10T18:14:29+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="nl"
+                href="http://localhost:8888/nl/highres/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:8888/en/highres/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="http://localhost:8888/highres/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://localhost:8888/</loc>
+    <lastmod>2020-06-10T18:14:29+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:8888/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="nl"
+                href="http://localhost:8888/nl/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="http://localhost:8888/"
+                />
+  </url>
+  
+</urlset>
