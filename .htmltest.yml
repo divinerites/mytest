@@ -1,0 +1,25 @@
+DirectoryPath: "public"
+EnforceHTTPS: false
+IgnoreURLs:
+- "facebook.com"
+- "tweeter.com"
+- "instagram.com"
+- "googleapis.com"
+- "zotabox.com"
+IgnoreDirs:
+- "lib"
+- "revealjs"
+CacheExpires: "1h"
+CheckExternal: false
+IgnoreAltMissing: true
+CheckInternalHash: false
+CheckDoctype: false
+
+CheckFavicon: false
+
+CheckAnchors: true
+# IgnoreEmptyHref: true
+IgnoreInternalEmptyHash: true
+
+# experimental
+# TestFilesConcurrently: true
