@@ -14,3 +14,5 @@ $pageurl : {{ $pageurl }}<br>
     {{ .Lang }} : <a href="{{ site.BaseURL | absURL }}{{ .Lang }}">{{ site.BaseURL | absURL }}{{ .Lang }}</a><br>
     {{ end }}
 {{ end }}
+
+<p>hugo : {{ hugo.Version }}</p>
