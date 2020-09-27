@@ -1,5 +1,9 @@
-{{ partial "header.html" . }}
+{{ partial "header-bugcss.html" . }}
 
-{{ partial "test_getpage.html" . }}
+<h1>Bug CSS refresh when static is mouted in assets</h1>
+
+<p>See <a href ="https://github.com/gohugoio/hugo/issues/7740">https://github.com/gohugoio/hugo/issues/7740</a></p>
+<h2>H2 in STATIC is RED</h2>
+<h3>H3 in ASSETS is BLUE</h3>
 
 {{ partial "footer.html" . }}

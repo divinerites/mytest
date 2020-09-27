@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html class="no-js" lang="{{ with site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="canonical" href="{{ .Permalink }}">
+
+    {{- $css1 := resources.Get "/css/static.css"  }}
+	{{- $css1 = $css1 | fingerprint }}
+    <link href="{{ $css1.RelPermalink }}" rel="stylesheet" type="text/css">
+
+    {{- $css2 := resources.Get "/css/assets.css"  }}
+    {{- $css2 = $css2 | fingerprint }}
+    <link href="{{ $css2.RelPermalink }}" rel="stylesheet" type="text/css">
+
+</head>
+<body id="body">
